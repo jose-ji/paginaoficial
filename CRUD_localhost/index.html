@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head> 
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #666;
+}
+</style>
+<body>
+    <nav class="navbar">
+    <ul>
+        <li><a href="../../Web servicio magtimus.html">Inicio</a></li>
+        <li><a href="../pagina1/index.html">Página 1</a></li>
+        <li><a href="../pagina2/index.html">Página 2</a></li>
+        <li><a href="../pagina3/index.html">Página 3</a></li>
+        <li><a href="../pagina4/index.html">Página 4</a></li>
+        <li><a href="../CRUD_localhost/index.html">LocalHost</a></li>
+        <li><a href="../pagina4/index.html">Curriculum</a></li>
+    </ul>
+</nav>
+</body>
+</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CRUD demo js</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body class="container">
+        <div class="mensaje-alerta">
+        </div>
+
+        <div class="jumbotron row ">
+            <h2> Finca Secbi <small>Gestión de vacas</small></h2>
+
+
+            <div class="col-md-6">
+                <hr>
+                    <p class="modo"> <span class="glyphicon glyphicon-plus"></span>Agregar vaca</p>
+                <form id="vacas-form">
+                    <input  class="form-control" type="text" id="nombre" placeholder="Nombre">
+                    <input  class="form-control" type="email" id="correo" placeholder="Correo de la vaca">
+                    <input  class="form-control" type="number" id="peso" placeholder="Peso en kg">
+                    <input  class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
+                    <input  class="form-control" type="text" id="Produccion" placeholder="Produccion diaria de leche">
+                    <input  class="form-control" type="text" id="Raza" placeholder="Tipo de raza">
+                    <br>
+                    <input type="submit" class="btn btn-success" value=" Guardar">
+                </form>
+                <br>
+                <br>
+                <div id="numeroVacas">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <img style=" width:100%" src="vaca.jpg" alt="" />
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+        <table class="table" id="dbVacas-list">
+
+        </table>
+
+    </body>
+    <script type="text/javascript" src="funciones.js"></script>
+</html>
